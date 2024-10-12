@@ -20,7 +20,7 @@ const result = document.getElementById("result");
 
 //********* function to convert to binary ********/////
 const decimalToBinary = (input) => {
-    if (input === 0 ||input === 1) {
+    if (input === 0 || input === 1) {
         return String(input);
     } else {
         return decimalToBinary(Math.floor(input / 2)) + (input % 2);
@@ -72,13 +72,22 @@ const decimalToBinary = (input) => {
 // }
 // ******** END *******////
 
+const showAnimation = () => {
+
+};
+
 const checkUserInput = () => {
+    const inputInt = parseInt(numberInput.value);
     if (!numberInput.value ||
-        isNaN(parseInt(numberInput.value)) || parseInt(numberInput.value) < 0) {
+        isNaN(inputInt) || inputInt < 0) {
         alert("Please provide a decimal number greater than or equal to 0");
         return
     }
-    // decimalToBinary(parseInt(numberInput.value));
+    if (inputInt === 5) {
+        showAnimation()
+        return
+    }
+    // decimalToBinary(inputInt);
     result.textContent = decimalToBinary(Math.floor(input / 2)) + (input % 2)
     numberInput.value = "";
 };
