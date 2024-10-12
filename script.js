@@ -17,6 +17,22 @@ console.log(a());
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
+const animationContainer = document.getElementById("animation-container");
+
+const animationData = [
+    {
+        inputVal: 5,
+        addElDelay: 1000
+    },
+    {
+        inputVal: 2,
+        addElDelay: 1500
+    },
+    {
+        inputVal: 1,
+        addElDelay: 2000
+    }
+];
 
 //********* function to convert to binary ********/////
 const decimalToBinary = (input) => {
@@ -73,7 +89,10 @@ const decimalToBinary = (input) => {
 // ******** END *******////
 
 const showAnimation = () => {
-
+    result.innerText = "Call Stack Animation";
+    animationData.forEach((obj) => {
+        
+    })
 };
 
 const checkUserInput = () => {
